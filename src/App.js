@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Card from "./components/Card";
+import NavBar from "./components/NavBar";
+import estilos from "./style/estilos.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="estilos">
+      <NavBar />
+      <Card />
+      <footer className="bg-gray-700">
+        <div className="container mx-auto">
+          <p className="text-center text-white py-4 text-base">
+            © 2022 Martin Miño.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
