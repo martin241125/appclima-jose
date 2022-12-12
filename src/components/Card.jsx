@@ -2,12 +2,13 @@ import React from "react";
 import { useState } from "react";
 import Form from "./Form";
 import CardDetail from "./CardDetail";
+import api from '../../api/api.js'
 
 const Card = () => {
-  let url = "https://api.openweathermap.org/data/2.5/weather?appid=1414a9db2f5d6af4d4fa884a3e1de812&lang=es";
+  let url = `https://api.openweathermap.org/data/2.5/weather?appid=${api}&lang=es`;
   let cityUrl = "&q=";
 
-  let urlFcaste = "https://api.openweathermap.org/data/2.5/forecast?appid=1414a9db2f5d6af4d4fa884a3e1de812&lang=es";
+  let urlFcaste = `https://api.openweathermap.org/data/2.5/forecast?appid=${api}&lang=es`;
 
   const [weather, setWeather] = useState([]);
   const [forecast, setForecast] = useState([]);
